@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>유흥 동문회 레크리에이션</title>
+  <meta name="description" content="유흥 동문회 레크리에이션 진행용 페이지">
+  <meta name="theme-color" content="#0f1020">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="#intro" id="brand">유흥 동문회</a>
+  <nav class="nav" id="nav" aria-label="섹션 이동"></nav>
+</header>
+
+<main id="app"></main>
+
+<button class="fab" id="fab" type="button" aria-haspopup="dialog">점수판</button>
+
+<dialog id="scoreDialog" aria-label="점수판">
+  <div class="dlg-head">
+    <h3>실시간 점수판</h3>
+    <button class="btn ghost sm" id="dlgClose" type="button">닫기</button>
+  </div>
+  <div id="dlgBoard"></div>
+  <div class="dlg-foot">
+    <button class="btn ghost sm" id="undoBtn" type="button">방금 점수 되돌리기</button>
+    <button class="btn danger sm" id="resetBtn" type="button">전체 점수 초기화</button>
+  </div>
+  <p class="hint">점수는 이 기기의 브라우저에 자동 저장됩니다. 칸을 직접 눌러 수정할 수도 있어요.</p>
+</dialog>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
